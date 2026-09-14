@@ -14,6 +14,7 @@ export function Toolbox() {
       <main className="page-shell">
         <header className="hero"> 
           <h1>Forge</h1>
+          <p>Baocheng's Personal Toolbox, a collection of all automation bash scripts I wrote to make my life easier</p>
         </header>
 
         <div className="catalogue">

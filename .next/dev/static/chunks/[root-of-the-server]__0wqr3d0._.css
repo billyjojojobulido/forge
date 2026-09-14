@@ -636,8 +636,8 @@ code, pre {
 }
 
 .hero {
-  max-width: 720px;
-  margin-bottom: 64px;
+  max-width: 70vw;
+  margin-bottom: 32px;
 }
 
 .hero h1 {
@@ -649,7 +649,7 @@ code, pre {
 
 .hero > p:last-child {
   color: var(--text-soft);
-  max-width: 620px;
+  max-width: 70vw;
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.7;
