@@ -6,8 +6,13 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-ui' });
 const mono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: 'Personal Toolbox',
-  description: 'A visual catalogue for scripts and CLI tools I have already built.'
+  title: "Forge - Baocheng's Personal Toolbox",
+  description:
+    "Baocheng's Personal Toolbox, a visual catalogue for scripts and CLI tools I have already built.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
