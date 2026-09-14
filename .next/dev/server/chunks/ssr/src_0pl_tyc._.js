@@ -742,12 +742,95 @@ function Toolbox() {
 }
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
-"[project]/src/data/tools.ts [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/src/data/tools.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-var e = new Error("Could not parse module '[project]/src/data/tools.ts'\n\nExpected ',', got 'ident'");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "categories",
+    ()=>categories,
+    "tools",
+    ()=>tools
+]);
+(()=>{
+    const e = new Error("Cannot find module './tools/game/wav-ogg'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
+(()=>{
+    const e = new Error("Cannot find module './tools/game/audio-pack'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$localisation$2f$restructure$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/localisation/restructure.ts [app-ssr] (ecmascript)");
+;
+;
+;
+const tools = [
+    {
+        id: "game-setup",
+        name: "Cocos Game Setup",
+        description: "Force cleanup the project and re-install all libs, and it will auto generate an .env file.",
+        category: "Cocos Game Project",
+        command: "setup",
+        examples: [
+            "setup"
+        ]
+    },
+    {
+        id: "game-lazy-update",
+        name: "Lazy Game Setup",
+        description: "A short cut one-line stream solution ",
+        category: "Maintainer",
+        command: "lazy-update-setup",
+        examples: [
+            "setup"
+        ]
+    },
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$localisation$2f$restructure$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["restructureLocalisation"],
+    audioPack,
+    wavToOgg
+];
+const categories = Array.from(new Set(tools.map((tool)=>tool.category)));
+}),
+"[project]/src/data/tools/localisation/restructure.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "restructureLocalisation",
+    ()=>restructureLocalisation
+]);
+const restructureLocalisation = {
+    id: "restructure-localisation",
+    name: "Restructure Localisation",
+    description: "Fix localisation assets delivered as language → feature and reorganise them into feature → language.",
+    category: "Localisation",
+    command: "./restructure-localisation.sh <source-directory>",
+    options: [
+        {
+            flag: "--dry-run",
+            description: "Preview the planned file operations without changing anything."
+        },
+        {
+            flag: "--backup",
+            description: "Create a backup before restructuring files."
+        },
+        {
+            flag: "--verbose",
+            description: "Print each file operation while the script runs."
+        }
+    ],
+    examples: [
+        "./restructure-localisation.sh ./localisation --dry-run",
+        "./restructure-localisation.sh ./localisation --backup"
+    ],
+    notes: [
+        "Normalise two-letter language folders to lowercase.",
+        "Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg."
+    ],
+    source: "scripts/localisation/restructure-localisation.sh"
+};
 }),
 ];
 
-//# sourceMappingURL=src_1hlwd78._.js.map
+//# sourceMappingURL=src_0pl_tyc._.js.map

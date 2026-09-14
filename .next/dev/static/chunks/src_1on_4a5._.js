@@ -770,12 +770,183 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/src/data/tools.ts [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/src/data/tools.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-var e = new Error("Could not parse module '[project]/src/data/tools.ts'\n\nExpected ',', got 'ident'");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "categories",
+    ()=>categories,
+    "tools",
+    ()=>tools
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$audio$2f$wav$2d$ogg$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/audio/wav-ogg.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$audio$2f$audio$2d$pack$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/audio/audio-pack.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$localisation$2f$restructure$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/localisation/restructure.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$game$2d$setup$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/game/game-setup.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$maintainer$2f$lazy$2d$update$2d$setup$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/maintainer/lazy-update-setup.ts [app-client] (ecmascript)");
+;
+;
+;
+;
+;
+const tools = [
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$game$2d$setup$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["gameSetup"],
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$maintainer$2f$lazy$2d$update$2d$setup$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["lazyUpdateSetup"],
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$localisation$2f$restructure$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["restructureLocalisation"],
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$audio$2f$audio$2d$pack$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["audioPack"],
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$audio$2f$wav$2d$ogg$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["wavToOgg"]
+];
+const categories = Array.from(new Set(tools.map((tool)=>tool.category)));
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/audio/audio-pack.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "audioPack",
+    ()=>audioPack
+]);
+const audioPack = {
+    id: "audio-pack",
+    name: "Pack Audio",
+    description: "Convert and pack audio assets for game projects.",
+    category: "Audio",
+    command: "./pack-audio.sh <source>",
+    options: [
+        {
+            flag: "--format <format>",
+            description: "Target audio format, e.g. ogg or mp3."
+        },
+        {
+            flag: "--output <directory>",
+            description: "Output directory."
+        }
+    ],
+    examples: [
+        "./pack-audio.sh ./audio --format ogg"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/audio/wav-ogg.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "wavToOgg",
+    ()=>wavToOgg
+]);
+const wavToOgg = {
+    id: "wav-to-ogg",
+    name: "WAV → OGG",
+    description: "Batch-convert source WAV audio into OGG files for game assets.",
+    category: "Audio",
+    command: "./wav-to-ogg.sh <source-directory>",
+    options: [
+        {
+            flag: "--quality <n>",
+            description: "Choose the OGG quality level used for conversion."
+        }
+    ],
+    examples: [
+        "./wav-to-ogg.sh ./audio --quality 6"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/game/game-setup.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "gameSetup",
+    ()=>gameSetup
+]);
+const gameSetup = {
+    id: "game-setup",
+    name: "Cocos Game Setup",
+    description: "Force cleanup the project and re-install all libs, and it will auto generate an .env file.",
+    category: "Cocos Game Project",
+    command: "setup",
+    examples: [
+        "setup"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/localisation/restructure.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "restructureLocalisation",
+    ()=>restructureLocalisation
+]);
+const restructureLocalisation = {
+    id: "restructure-localisation",
+    name: "Restructure Localisation",
+    description: "Fix localisation assets delivered as language → feature and reorganise them into feature → language.",
+    category: "Localisation",
+    command: "./restructure-localisation.sh <source-directory>",
+    options: [
+        {
+            flag: "--dry-run",
+            description: "Preview the planned file operations without changing anything."
+        },
+        {
+            flag: "--backup",
+            description: "Create a backup before restructuring files."
+        },
+        {
+            flag: "--verbose",
+            description: "Print each file operation while the script runs."
+        }
+    ],
+    examples: [
+        "./restructure-localisation.sh ./localisation --dry-run",
+        "./restructure-localisation.sh ./localisation --backup"
+    ],
+    notes: [
+        "Normalise two-letter language folders to lowercase.",
+        "Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg."
+    ],
+    source: "scripts/localisation/restructure-localisation.sh"
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/maintainer/lazy-update-setup.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "lazyUpdateSetup",
+    ()=>lazyUpdateSetup
+]);
+const lazyUpdateSetup = {
+    id: "game-lazy-update",
+    name: "Lazy Game Setup",
+    description: "A short cut one-line stream solution ",
+    category: "Maintainer",
+    command: "lazy-update-setup",
+    examples: [
+        "setup"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
 }),
 ]);
 
-//# sourceMappingURL=src_0fgjkep._.js.map
+//# sourceMappingURL=src_1on_4a5._.js.map

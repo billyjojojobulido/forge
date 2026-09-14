@@ -742,12 +742,129 @@ function Toolbox() {
 }
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
-"[project]/src/data/tools.ts [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/src/data/tools.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-var e = new Error("Could not parse module '[project]/src/data/tools.ts'\n\nExpected ',', got 'ident'");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "categories",
+    ()=>categories,
+    "tools",
+    ()=>tools
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$wav$2d$ogg$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/game/wav-ogg.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$audio$2d$pack$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/tools/game/audio-pack.ts [app-ssr] (ecmascript)");
+;
+;
+const tools = [
+    {
+        id: "game-setup",
+        name: "Cocos Game Setup",
+        description: "Force cleanup the project and re-install all libs, and it will auto generate an .env file.",
+        category: "Cocos Game Project",
+        command: "setup",
+        examples: [
+            "setup"
+        ]
+    },
+    {
+        id: "game-lazy-update",
+        name: "Lazy Game Setup",
+        description: "A short cut one-line stream solution ",
+        category: "Maintainer",
+        command: "lazy-update-setup",
+        examples: [
+            "setup"
+        ]
+    },
+    {
+        id: "restructure-localisation",
+        name: "Restructure Localisation",
+        description: "Fix localisation assets delivered as language → feature and reorganise them into feature → language.",
+        category: "Localisation",
+        command: "./restructure-localisation.sh <source-directory>",
+        options: [
+            {
+                flag: "--dry-run",
+                description: "Preview the planned file operations without changing anything."
+            },
+            {
+                flag: "--backup",
+                description: "Create a backup before restructuring files."
+            },
+            {
+                flag: "--verbose",
+                description: "Print each file operation while the script runs."
+            }
+        ],
+        examples: [
+            "./restructure-localisation.sh ./localisation --dry-run",
+            "./restructure-localisation.sh ./localisation --backup"
+        ],
+        notes: [
+            "Normalise two-letter language folders to lowercase.",
+            "Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg."
+        ],
+        source: "scripts/localisation/restructure-localisation.sh"
+    },
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$audio$2d$pack$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["audioPack"],
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$tools$2f$game$2f$wav$2d$ogg$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["wavToOgg"]
+];
+const categories = Array.from(new Set(tools.map((tool)=>tool.category)));
+}),
+"[project]/src/data/tools/game/audio-pack.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "audioPack",
+    ()=>audioPack
+]);
+const audioPack = {
+    id: "audio-pack",
+    name: "Pack Audio",
+    description: "Convert and pack audio assets for game projects.",
+    category: "Audio",
+    command: "./pack-audio.sh <source>",
+    options: [
+        {
+            flag: "--format <format>",
+            description: "Target audio format, e.g. ogg or mp3."
+        },
+        {
+            flag: "--output <directory>",
+            description: "Output directory."
+        }
+    ],
+    examples: [
+        "./pack-audio.sh ./audio --format ogg"
+    ]
+};
+}),
+"[project]/src/data/tools/game/wav-ogg.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "wavToOgg",
+    ()=>wavToOgg
+]);
+const wavToOgg = {
+    id: "wav-to-ogg",
+    name: "WAV → OGG",
+    description: "Batch-convert source WAV audio into OGG files for game assets.",
+    category: "Audio",
+    command: "./wav-to-ogg.sh <source-directory>",
+    options: [
+        {
+            flag: "--quality <n>",
+            description: "Choose the OGG quality level used for conversion."
+        }
+    ],
+    examples: [
+        "./wav-to-ogg.sh ./audio --quality 6"
+    ]
+};
 }),
 ];
 
-//# sourceMappingURL=src_1hlwd78._.js.map
+//# sourceMappingURL=src_057-adc._.js.map

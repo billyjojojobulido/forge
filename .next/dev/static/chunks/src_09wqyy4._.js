@@ -772,10 +772,112 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 "[project]/src/data/tools.ts [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-var e = new Error("Could not parse module '[project]/src/data/tools.ts'\n\nExpected ',', got 'ident'");
+var e = new Error("Could not parse module '[project]/src/data/tools.ts'\n\nExpected ',', got '{'");
 e.code = 'MODULE_UNPARSABLE';
 throw e;
 }),
+"[project]/src/data/tools/audio/audio-pack.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "audioPack",
+    ()=>audioPack
+]);
+const audioPack = {
+    id: "audio-pack",
+    name: "Pack Audio",
+    description: "Convert and pack audio assets for game projects.",
+    category: "Audio",
+    command: "./pack-audio.sh <source>",
+    options: [
+        {
+            flag: "--format <format>",
+            description: "Target audio format, e.g. ogg or mp3."
+        },
+        {
+            flag: "--output <directory>",
+            description: "Output directory."
+        }
+    ],
+    examples: [
+        "./pack-audio.sh ./audio --format ogg"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/audio/wav-ogg.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "wavToOgg",
+    ()=>wavToOgg
+]);
+const wavToOgg = {
+    id: "wav-to-ogg",
+    name: "WAV → OGG",
+    description: "Batch-convert source WAV audio into OGG files for game assets.",
+    category: "Audio",
+    command: "./wav-to-ogg.sh <source-directory>",
+    options: [
+        {
+            flag: "--quality <n>",
+            description: "Choose the OGG quality level used for conversion."
+        }
+    ],
+    examples: [
+        "./wav-to-ogg.sh ./audio --quality 6"
+    ]
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/data/tools/localisation/restructure.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// data/tools/audio-pack.ts
+__turbopack_context__.s([
+    "restructureLocalisation",
+    ()=>restructureLocalisation
+]);
+const restructureLocalisation = {
+    id: "restructure-localisation",
+    name: "Restructure Localisation",
+    description: "Fix localisation assets delivered as language → feature and reorganise them into feature → language.",
+    category: "Localisation",
+    command: "./restructure-localisation.sh <source-directory>",
+    options: [
+        {
+            flag: "--dry-run",
+            description: "Preview the planned file operations without changing anything."
+        },
+        {
+            flag: "--backup",
+            description: "Create a backup before restructuring files."
+        },
+        {
+            flag: "--verbose",
+            description: "Print each file operation while the script runs."
+        }
+    ],
+    examples: [
+        "./restructure-localisation.sh ./localisation --dry-run",
+        "./restructure-localisation.sh ./localisation --backup"
+    ],
+    notes: [
+        "Normalise two-letter language folders to lowercase.",
+        "Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg."
+    ],
+    source: "scripts/localisation/restructure-localisation.sh"
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 ]);
 
-//# sourceMappingURL=src_0fgjkep._.js.map
+//# sourceMappingURL=src_09wqyy4._.js.map
