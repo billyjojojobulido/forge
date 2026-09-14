@@ -557,31 +557,14 @@ function Toolbox() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                         className: "hero",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "eyebrow",
-                                children: "PERSONAL CLI HANDBOOK"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Toolbox.tsx",
-                                lineNumber: 16,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                children: "Toolbox"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Toolbox.tsx",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: "Things I've already solved. Browse by purpose, recognise the tool, copy the command."
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Toolbox.tsx",
-                                lineNumber: 18,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            children: "Forge"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Toolbox.tsx",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/src/components/Toolbox.tsx",
                         lineNumber: 15,
                         columnNumber: 9
@@ -598,7 +581,7 @@ function Toolbox() {
                                                 children: category
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Toolbox.tsx",
-                                                lineNumber: 25,
+                                                lineNumber: 23,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -608,13 +591,13 @@ function Toolbox() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Toolbox.tsx",
-                                                lineNumber: 26,
+                                                lineNumber: 24,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Toolbox.tsx",
-                                        lineNumber: 24,
+                                        lineNumber: 22,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -624,23 +607,23 @@ function Toolbox() {
                                                 onOpen: ()=>setSelected(tool)
                                             }, tool.id, false, {
                                                 fileName: "[project]/src/components/Toolbox.tsx",
-                                                lineNumber: 30,
+                                                lineNumber: 28,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Toolbox.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 26,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, category, true, {
                                 fileName: "[project]/src/components/Toolbox.tsx",
-                                lineNumber: 23,
+                                lineNumber: 21,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/Toolbox.tsx",
-                        lineNumber: 21,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this)
                 ]
@@ -655,7 +638,7 @@ function Toolbox() {
                 onClose: ()=>setSelected(null)
             }, void 0, false, {
                 fileName: "[project]/src/components/Toolbox.tsx",
-                lineNumber: 37,
+                lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
@@ -684,60 +667,69 @@ __turbopack_context__.s([
 ]);
 const tools = [
     {
-        id: 'restructure-localisation',
-        name: 'Restructure Localisation',
-        description: 'Fix localisation assets delivered as language → feature and reorganise them into feature → language.',
-        category: 'Localisation',
-        command: './restructure-localisation.sh <source-directory>',
-        options: [
-            {
-                flag: '--dry-run',
-                description: 'Preview the planned file operations without changing anything.'
-            },
-            {
-                flag: '--backup',
-                description: 'Create a backup before restructuring files.'
-            },
-            {
-                flag: '--verbose',
-                description: 'Print each file operation while the script runs.'
-            }
-        ],
+        id: "game-setup",
+        name: "Cocos Game Setup",
+        description: "Force cleanup the project and re-install all libs, and it will auto generate an .env file.",
+        category: "Cocos Game Project",
+        command: "setup",
         examples: [
-            './restructure-localisation.sh ./localisation --dry-run',
-            './restructure-localisation.sh ./localisation --backup'
-        ],
-        notes: [
-            'Normalise two-letter language folders to lowercase.',
-            'Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg.'
-        ],
-        source: 'scripts/localisation/restructure-localisation.sh'
-    },
-    {
-        id: 'wav-to-ogg',
-        name: 'WAV → OGG',
-        description: 'Batch-convert source WAV audio into OGG files for game assets.',
-        category: 'Audio',
-        command: './wav-to-ogg.sh <source-directory>',
-        options: [
-            {
-                flag: '--quality <n>',
-                description: 'Choose the OGG quality level used for conversion.'
-            }
-        ],
-        examples: [
-            './wav-to-ogg.sh ./audio --quality 6'
+            "setup"
         ]
     },
     {
-        id: 'clean-git-lfs',
-        name: 'Inspect Git LFS',
-        description: 'Quickly inspect LFS-tracked files before cleaning or migrating repository assets.',
-        category: 'Git',
-        command: 'git lfs ls-files',
+        id: "game-lazy-update",
+        name: "Lazy Game Setup",
+        description: "A short cut one-line stream solution ",
+        category: "Maintainer",
+        command: "lazy-update-setup",
         examples: [
-            'git lfs ls-files',
-            'git lfs status'
+            "setup"
+        ]
+    },
+    {
+        id: "restructure-localisation",
+        name: "Restructure Localisation",
+        description: "Fix localisation assets delivered as language → feature and reorganise them into feature → language.",
+        category: "Localisation",
+        command: "./restructure-localisation.sh <source-directory>",
+        options: [
+            {
+                flag: "--dry-run",
+                description: "Preview the planned file operations without changing anything."
+            },
+            {
+                flag: "--backup",
+                description: "Create a backup before restructuring files."
+            },
+            {
+                flag: "--verbose",
+                description: "Print each file operation while the script runs."
+            }
+        ],
+        examples: [
+            "./restructure-localisation.sh ./localisation --dry-run",
+            "./restructure-localisation.sh ./localisation --backup"
+        ],
+        notes: [
+            "Normalise two-letter language folders to lowercase.",
+            "Standalone splash.jpg files can be grouped under splash/<language>/splash.jpg."
+        ],
+        source: "scripts/localisation/restructure-localisation.sh"
+    },
+    {
+        id: "wav-to-ogg",
+        name: "WAV → OGG",
+        description: "Batch-convert source WAV audio into OGG files for game assets.",
+        category: "Audio",
+        command: "./wav-to-ogg.sh <source-directory>",
+        options: [
+            {
+                flag: "--quality <n>",
+                description: "Choose the OGG quality level used for conversion."
+            }
+        ],
+        examples: [
+            "./wav-to-ogg.sh ./audio --quality 6"
         ]
     }
 ];
